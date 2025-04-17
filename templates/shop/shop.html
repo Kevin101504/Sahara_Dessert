@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shop.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Online Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="shop">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product" data-id="1" data-name="Cookies" data-price="19.99">
+                <img src="{{ url_for('static', filename='images/Pasted image.png') }}" alt="Product 1">
+                <h3>Cookies</h3>
+                <p>$19.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2" data-name="Cupcakes" data-price="19.99">
+                <img src="{{ url_for('static', filename='images/Pasted image (2).png') }}" alt="Product 2">
+                <h3>Cupcakes</h3>
+                <p>$24.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3" data-name="Brownies" data-price="19.99">
+                <img src="{{ url_for('static', filename='images/Pasted image (3).png') }}" alt="Product 3">
+                <h3>Brownies</h3>
+                <p>$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="4" data-name="Donuts" data-price="19.99">
+                <img src="{{ url_for('static', filename='images/Pasted image (4).png') }}" alt="Product 1">
+                <h3>Donuts</h3>
+                <p>$19.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="5" data-name="Product 1" data-price="19.99">
+                <img src="{{ url_for('static', filename='images/Pasted image (5).png') }}" alt="Product 2">
+                <h3>Tiramisu</h3>
+                <p>$24.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="6" data-name="Falooda" data-price="19.99">
+                <img src="{{ url_for('static', filename='images/Pasted image (6).png') }}" alt="Product 3">
+                <h3>Falooda</h3>
+                <p>$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="7" data-name="Chocolate Cake" data-price="19.99">
+                <img src="{{ url_for('static', filename='images/Pasted image (7).png') }}" alt="Product 1">
+                <h3>Chocolate Cake</h3>
+                <p>$19.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="8" data-name="Vanilla Cookies" data-price="19.99">
+                <img src="{{ url_for('static', filename='images/Pasted image (8).png') }}" alt="Product 2">
+                <h3>Vanilla Cookies</h3>
+                <p>$24.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="9" data-name="Vanilla Cake" data-price="19.99">
+                <img src="{{ url_for('static', filename='images/Pasted image (9).png') }}" alt="Product 3">
+                <h3>Vanilla Cake</h3>
+                <p>$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <section class="cart" id="cart-section">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="checkout">Checkout</button>
+    </section>
+    <footer>
+        <p>&copy; 2025 Online Shop. All rights reserved.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='shop.js') }}"></script>
+</body>
+</html>
